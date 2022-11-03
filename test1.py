@@ -16,19 +16,21 @@ def check_win (player ,computer):
          return  " you  win"  
     else :
         return  " you lose"
-    elif player == "scissors":
+    
+
+    if player == "scissors":
         if computer == "rock":
          return  " you  lose"  
     else :
         return  " you win"
     
-    elif player == "paper":
+    if player == "paper":
         if computer == "rock":
-         return  " you  win"  
+         return  " you  lose"  
     else :
-        return  " you lose"
+        return  " you win"
     
 
-choices = get_choices():
+choices = get_choices()
 result = check_win ( choices["player"] , choices ["computer"] )
 print ( result)
