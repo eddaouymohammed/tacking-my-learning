@@ -1,0 +1,50 @@
+import random
+from unittest import result
+condition = True
+
+name=input("what is your name:")
+
+if condition ==True:
+
+    
+    if name== "eddaouy" :
+    
+        def get_choices ():
+            player_choice = input("Enter the player  choice (rock,paper,scissors):")
+            option = ["rock","paper","scissors"]
+            computer_choice = random.choice(option)
+            choices = {"player":player_choice , "computer":computer_choice}
+            return (choices)
+        def check_win (player ,computer):
+            print (f"you chose  {player} , computer chose  {computer}")
+        
+            
+            if player==computer:
+                return "its a tie!"
+            if player == "rock":
+                if computer == "scissors":
+                 return" you  win"  
+            else :
+                return  " you lose"
+            if player == "scissors":
+                if computer == "rock":
+                    return "you  lose"  
+            else :
+                return  " you win"
+            
+            if player == "paper":
+                if computer == "rock":
+                    return  " you  win"  
+            else :
+                return  " you lose"
+            option = ["rock","paper","scissors"]
+            
+
+        choices = get_choices()
+        result = check_win ( choices["player"] , choices ["computer"] )
+        print ( result)
+    if name == "med":
+        print("your not wellcome")
+if condition==False:
+    print("ERROR404")
+ 
